@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--META-->
+  <meta name="description" content="RLTRACKER is the most advanced rocket league stat tracking website. We also include tips on how to improve your in-game skills." />
+  <meta property="og:description" content="RLTRACKER is the most advanced rocket league stat tracking website. We also include tips on how to improve your in-game skills." />
+  <meta property="og:site_name" content="RLTRACKER | Rocket League Stat Tracking" />
+  <meta property="og:image" content="https://RLTRACKER.io/IMG/logo.png" />
+  <meta property="og:url" content="https://RLTRACKER.io/" />
+  <meta name="keywords" content="Rocket League Stats, Rocket League Stat Tracking, ROcket League, Rocket, League, Stats">
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="../IMG/icon.png">
+  <meta property="og:title" content="RLTRACKER | Rocket League Stat Tracking" />
+
+  <!--ICONS-->
+  <script src="https://kit.fontawesome.com/d3e8a97b92.js" crossorigin="anonymous"></script>
+
+  <!--FONT-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!--CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!--TITLE-->
+  <title>RLTRACKER</title>
+</head>
+
+<body onload="load()">
+  <script type="text/javascript" language="javascript">
+    var versionUpdate = (new Date()).getTime();
+    var style = document.createElement("link");
+    style.rel = "stylesheet";
+    style.href = "../CSS/index.css?v=" + versionUpdate;
+    document.head.appendChild(style);
+  </script>
+  <div id="particles-js"></div>
+  <div class="container-fluid p-2" style="background-color: #1C1E23; font-weight: bold; letter-spacing: 1px;">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark justify-content-between">
+        <a href="/" class="my-auto" style="text-decoration: none; color: white; font-size: x-large;"><img src="../IMG/logo.png" width="125px"></a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-4">
+                <li class="nav-item mr-2">
+                  <a class="nav-link" href="/blog"><i class="fas fa-list"></i> Leaderboard</a>
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="openLink('https://discord.gg/aW2bzZzAKU')"><i class="fab fa-discord"></i> Discord</button>
+      </nav>
+    </div>
+  </div>
+
+
+  <div class="container-fluid" style="margin-top: 15vh; margin-bottom: 5vh; position: relative; z-index: 1;">
+    <img class="animate__animated animate__fadeInDown" src="../IMG/logo.png" style="max-width: 100%;">
+  </div>
+
+  <div class="container-fluid animate__animated animate__fadeIn" style="position: relative; z-index: 3;">
+    <div class="input-group input-group-lg mb-2 mx-auto searchBar">
+      <div class="input-group-prepend">
+        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="platform">PLATFORM</button>
+        <div class="dropdown-menu" style="font-size: x-large;">
+          <button class="dropdown-item" onclick="changePlatform('Steam')"><i class="fab fa-steam"></i> Steam</button>
+          <button class="dropdown-item" onclick="changePlatform('Epic')"><img src="../IMG/epicGames.png" width="25"> Epic Games</button>
+          <button class="dropdown-item" onclick="changePlatform('Playstation')"><i class="fab fa-playstation"></i> Playstation</button>
+          <button class="dropdown-item" onclick="changePlatform('Xbox')"><i class="fab fa-xbox"></i> Xbox</button>
+        </div>
+      </div>
+      <input type="text" id="usernameForm" class="form-control" placeholder="Username" onkeypress="submit(event)">
+    </div>
+  </div>
+
+  <div class="container-fluid" id="notFoundMessage">
+  </div>
+
+  <div id="carouselExampleSlidesOnly" class="carousel slide searchBar animate__animated animate__fadeInUp" data-ride="carousel" data-interval="3000" data-pause="false">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <img class="d-block mx-auto" style="display: block;" src="../IMG/RankIcons/Bronze.png" alt="First slide">
+            </div>
+            <div class="col-sm">
+              <img class="d-block mx-auto my-auto py-0" src="../IMG/RankIcons/Silver.png" alt="First slide">
+            </div>
+            <div class="col-sm">
+              <img class="d-block mx-auto my-auto" src="../IMG/RankIcons/Gold.png" alt="First slide">
+            </div>
+            <div class="col-sm">
+              <img class="d-block mx-auto my-auto" src="../IMG/RankIcons/Platinum.png" alt="First slide">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <img class="d-block mx-auto my-auto" src="../IMG/RankIcons/Diamond.png" alt="First slide">
+            </div>
+            <div class="col-sm">
+              <img class="d-block mx-auto my-auto" src="../IMG/RankIcons/Champion.png" alt="First slide">
+            </div>
+            <div class="col-sm">
+              <img class="d-block mx-auto my-auto" src="../IMG/RankIcons/GrandChampion.png" alt="First slide">
+            </div>
+            <div class="col-sm">
+              <img class="d-block mx-auto my-auto" src="../IMG/RankIcons/SuperSonicLegend.png" alt="First slide">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script type="text/javascript" language="javascript">
+    var versionUpdate = (new Date()).getTime();
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "../JS/index.js?v=" + versionUpdate;
+    document.body.appendChild(script);
+  </script>
+</body>
+
+</html>

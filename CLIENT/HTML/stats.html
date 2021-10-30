@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!--META-->
+  <meta name="description" content="RLTRACKER is the most advanced rocket league stat tracking website. We also include tips on how to improve your in-game skills." />
+  <meta property="og:description" content="RLTRACKER is the most advanced rocket league stat tracking website. We also include tips on how to improve your in-game skills." />
+  <meta property="og:site_name" content="RLTRACKER | Rocket League Stat Tracking" />
+  <meta property="og:image" content="https://RLTRACKER.io/IMG/logo.png" />
+  <meta property="og:url" content="https://RLTRACKER.io/" />
+  <meta name="keywords" content="Rocket League Stats, Rocket League Stat Tracking, ROcket League, Rocket, League, Stats">
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="../IMG/icon.png">
+  <meta property="og:title" content="RLTRACKER | Rocket League Stat Tracking" />
+
+  <!--ICONS-->
+  <script src="https://kit.fontawesome.com/d3e8a97b92.js" crossorigin="anonymous"></script>
+
+  <!--FONT-->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+
+  <!--CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <!--TITLE-->
+  <title>RLTRACKER</title>
+</head>
+
+<body onload="load()">
+  <script type="text/javascript" language="javascript">
+    var versionUpdate = (new Date()).getTime();
+    var style = document.createElement("link");
+    style.rel = "stylesheet";
+    style.href = "../CSS/stats.css?v=" + versionUpdate;
+    document.head.appendChild(style);
+  </script>
+  <div id="particles-js"></div>
+  <div class="container-fluid p-2" style="background-color: #1C1E23; font-weight: bold; letter-spacing: 1px;">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark justify-content-between">
+        <a href="/" class="my-auto" style="text-decoration: none; color: white; font-size: x-large;"><img src="../IMG/logo.png" width="125px"></a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-4">
+                <li class="nav-item mr-2">
+                  <a class="nav-link" href="/blog"><i class="fas fa-list"></i> Leaderboard</a>
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary" onclick="openLink('https://discord.gg/aW2bzZzAKU')"><i class="fab fa-discord"></i> Discord</button>
+      </nav>
+    </div>
+  </div>
+
+
+  <div class="container-fluid my-5" id="userInfo">
+
+
+    <div class="container-fluid playerCard">
+      <div class="row">
+        <div class="col-sm my-auto">
+          <img src="../IMG/defaultIcon.png" class="rounded-circle" width="100px">
+          <h3 class="mt-3">USERNAME</h3>
+          <h4>Reward Level:</h4>
+          <h5 class="my-auto">Platinum <img class="my-auto" src="https://trackercdn.com/cdn/tracker.gg/rocket-league/ranks/s4-10.png" width="35"></h5>
+        </div>
+        <div class="col-sm-8 my-auto">
+
+
+
+          <div class="row">
+            <div class="col-sm"></div>
+
+
+
+            <div class="col-sm-3 listCard my-3 mx-3 pt-3">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h4>WINS</h4>
+                </div>
+                <div class="col-sm-6">
+                  <h4>50</h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <p># 1.53m</p>
+                </div>
+                <div class="col-sm-6">
+                  <p>Top 50%</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm"></div>
+
+            <div class="col-sm-3 listCard my-3 mx-3 pt-3">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h4>GOALS</h4>
+                </div>
+                <div class="col-sm-6">
+                  <h4>200</h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <p># 1.78m</p>
+                </div>
+                <div class="col-sm-6">
+                  <p>Top 60%</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-sm"></div>
+
+
+            <div class="col-sm-3 listCard my-3 mx-3 pt-3">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h4>ASSISTS</h4>
+                </div>
+                <div class="col-sm-6">
+                  <h4>200</h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <p># 1.85m</p>
+                </div>
+                <div class="col-sm-6">
+                  <p>Top 75%</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-sm"></div>
+          </div>
+
+
+
+
+
+
+
+
+          <div class="row">
+
+
+            <div class="col-sm"></div>
+
+
+            <div class="col-sm-3 listCard my-3 mx-3 pt-3">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h4>MVPS</h4>
+                </div>
+                <div class="col-sm-6">
+                  <h4>74</h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <p># 1.97m</p>
+                </div>
+                <div class="col-sm-6">
+                  <p>Top 80%</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-sm"></div>
+
+
+
+            <div class="col-sm-3 listCard my-3 mx-3 pt-3">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h4>SHOTS</h4>
+                </div>
+                <div class="col-sm-6">
+                  <h4>150</h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <p># 1.95m</p>
+                </div>
+                <div class="col-sm-6">
+                  <p>Top 90%</p>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-sm"></div>
+
+
+            <div class="col-sm-3 listCard my-3 mx-3 pt-3">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h4>SAVES</h4>
+                </div>
+                <div class="col-sm-6">
+                  <h4>25</h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-6">
+                  <p># 2.43m</p>
+                </div>
+                <div class="col-sm-6">
+                  <p>Top 97%</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-sm"></div>
+          </div>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container-fluid playerCard mt-3">
+      <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm-3">
+          Ranked 1's
+        </div>
+        <div class="col-sm"></div>
+        <div class="col-sm-3">
+          Ranked 2's
+        </div>
+        <div class="col-sm"></div>
+        <div class="col-sm-3">
+          Ranked 3's
+        </div>
+        <div class="col-sm"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm-3">
+          Ranked 1's
+        </div>
+        <div class="col-sm"></div>
+        <div class="col-sm-3">
+          Ranked 2's
+        </div>
+        <div class="col-sm"></div>
+        <div class="col-sm-3">
+          Ranked 3's
+        </div>
+        <div class="col-sm"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm"></div>
+        <div class="col-sm-3">
+          Ranked 1's
+        </div>
+        <div class="col-sm"></div>
+        <div class="col-sm-3">
+          Ranked 2's
+        </div>
+        <div class="col-sm"></div>
+        <div class="col-sm-3">
+          Ranked 3's
+        </div>
+        <div class="col-sm"></div>
+      </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script type="text/javascript" language="javascript">
+    var versionUpdate = (new Date()).getTime();
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "../JS/stats.js?v=" + versionUpdate;
+    document.body.appendChild(script);
+  </script>
+</body>
+
+</html>

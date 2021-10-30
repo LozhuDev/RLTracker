@@ -1,0 +1,19 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Mythic Slushy is a musician and artist promotion website.",
+  "main": "main.js",
+  "dependencies": {
+    "axios": "^0.23.0",
+    "chalk": "^4.1.2",
+    "express": "^4.17.1",
+    "rethinkdb": "^2.4.2",
+    "socket.io": "^4.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Anthony Bath",
+  "license": "ISC"
+}
